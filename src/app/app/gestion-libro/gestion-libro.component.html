@@ -1,0 +1,19 @@
+<header class="banner">
+    <img src="assets/logo.png" alt="Logo de la empresa" class="overlay-image">
+</header>
+<div class="container">
+    <h2>Registro</h2>
+    <form [formGroup]="formOnes">
+        <div class="form-group">
+            <label for="title">Titulo</label>
+            <input type="text" id="title" formControlName="title" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f['title'].errors }" required />
+        </div>
+        <div class="form-group">
+            <label for="author">Autor</label>
+            <input type="author" id="author" formControlName="author" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f['author'].errors }" required />
+        </div>
+        <button type="button" (click)="onSubmit()">Registrar</button>
+    </form>
+</div>
